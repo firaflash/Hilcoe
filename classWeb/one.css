@@ -1,0 +1,17 @@
+/* *,::after,::before{
+    margin: 0;
+    padding: 0;   
+} */
+/* .levels p{
+    background-color: aqua;
+} */
+ 
+/* h2 p{
+    background-color: green;
+}
+div p{
+    background-color: rgb(50, 119, 50);
+} */
+body  div ~ p{
+    background-color: yellow;
+}
