@@ -1,0 +1,153 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #006d77;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Featured Puppies Section (3 items in a column on mobile) */
+.featured {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 3rem 0;
+    align-items: center;
+}
+
+.puppy-card {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.puppy-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.missing {
+    background-color: #ff4d6d;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* More Puppies Section (2 per row on mobile) */
+.more-puppies h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.puppy-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.puppy-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #006d77;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+}
+footer a{
+    color: white;
+}
+footer a:visited a::after{
+    content: "visited github";
+}
+
+/* ================== DESKTOP STYLES (≥768px) ================== */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    /* Featured section: 3 items in a row */
+    .featured {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .puppy-card {
+        max-width: 280px;
+    }
+
+    /* More puppies: 2 columns */
+    .puppy-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .more-puppies h2 {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 768px) {
+        .missing{
+        display: none;
+    }
+
+}
